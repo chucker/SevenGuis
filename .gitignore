@@ -1,4 +1,6 @@
-SevenGuis.BlazorWasm/.vs
+.vs
+bin/
+obj/
 
-SevenGuis.BlazorWasm/SevenGuis.BlazorWasm/bin
-SevenGuis.BlazorWasm/SevenGuis.BlazorWasm/obj
+xcuserdata/
+.DS_Store
