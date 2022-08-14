@@ -5,10 +5,13 @@
              x:Class="SevenGuis.Maui.MainPage"
              x:DataType="sevenguis:MainPage">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="10" Margin="10">
 
         <Button Text="Counter"
                 Command="{Binding Navigate}" CommandParameter="Counter" />
+
+        <Button Text="Temperature Converter"
+                Command="{Binding Navigate}" CommandParameter="TemperatureConverter" />
 
     </VerticalStackLayout>
 

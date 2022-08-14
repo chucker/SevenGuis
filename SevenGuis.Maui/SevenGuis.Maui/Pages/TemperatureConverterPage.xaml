@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:converters="clr-namespace:SevenGuis.Maui.Converters"
+             xmlns:pages="clr-namespace:SevenGuis.Maui.Pages"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SevenGuis.Maui.Pages.TemperatureConverterPage"
+             x:DataType="pages:TemperatureViewModel"
+             Title="TemperatureConverterPage">
+
+    <ContentPage.Resources>
+        <converters:FloatToStringConverter x:Key="FloatToStringConverter" />
+    </ContentPage.Resources>
+
+    <VerticalStackLayout VerticalOptions="Center" Margin="30,10">
+        <Label Text="Celsius" />
+        <Entry Text="{Binding Celsius,
+                              Converter={StaticResource FloatToStringConverter}}" />
+        <Label Text="Fahrenheit" />
+        <Entry Text="{Binding Fahrenheit,
+                              Converter={StaticResource FloatToStringConverter}}" />
+    </VerticalStackLayout>
+
+</ContentPage>

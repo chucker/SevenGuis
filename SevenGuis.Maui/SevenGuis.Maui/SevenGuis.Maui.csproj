@@ -55,5 +55,8 @@
 	  <MauiXaml Update="Pages\CounterPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\TemperatureConverterPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

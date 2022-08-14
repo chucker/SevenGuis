@@ -23,6 +23,9 @@ public partial class MainPage : ContentPage
             case "Counter":
                 await Navigation.PushAsync(new CounterPage());
                 break;
+            case "TemperatureConverter":
+                await Navigation.PushAsync(new TemperatureConverterPage());
+                break;
             default:
                 break;
         }
