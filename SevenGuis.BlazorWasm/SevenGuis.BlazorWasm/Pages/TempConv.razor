@@ -1,0 +1,18 @@
+﻿@page "/tempconv"
+
+<PageTitle>Temperature Converter</PageTitle>
+
+<h1>Temperature Converter</h1>
+
+<EditForm Model="@_Temperature">
+    <label>Celsius</label>
+    <InputNumber @bind-Value="@_Temperature.Celsius" />
+
+    <label>Fahrenheit</label>
+    <InputNumber @bind-Value="@_Temperature.Fahrenheit" />
+</EditForm>
+
+@code {
+    private Temperature _Temperature = new();
+}
+
