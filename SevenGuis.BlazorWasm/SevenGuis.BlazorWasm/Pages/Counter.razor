@@ -2,11 +2,25 @@
 
 <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
+<div class="window" style="width:20rem;">
+    <div class="title-bar">
+        <button aria-label="Close" class="close"></button>
+        <h1 class="title">Counter</h1>
+        <button aria-label="Resize" disabled class="hidden"></button>
+    </div>
 
-<p role="status">Current count: @_CurrentCount</p>
+    <div class="separator"></div>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+    <div class="modeless-dialog">
+        <section class="field-row" style="justify-content: flex-start">
+            <label for="text_find" class="modeless-text" style="width: 8rem">Current count:</label>
+            <input id="text_find" type="text" placeholder="" @bind-value="@_CurrentCount">
+        </section>
+        <section class="field-row" style="justify-content: flex-end">
+            <button class="btn" @onclick="IncrementCount">Increment</button>
+        </section>
+    </div>
+</div>
 
 @code {
     private int _CurrentCount = 0;
