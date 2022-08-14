@@ -5,19 +5,12 @@ using Microsoft.Maui.Controls;
 using System;
 using System.Windows.Input;
 
-namespace SevenGuis.Maui
+namespace SevenGuis.Maui.Pages
 {
-	public partial class MainPageViewModel : ObservableObject
+	public partial class CounterPageViewModel : ObservableObject
 	{
         [ObservableProperty]
         private int _Count;
-
-        //private int _Count;
-        //public int Count
-        //{
-        //    get => _Count;
-        //    set => SetProperty(ref _Count, value);
-        //}
 
         private Command _IncrementCommand;
         public ICommand IncrementCommand => _IncrementCommand ??= new Command(() =>

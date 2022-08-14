@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:SevenGuis.Maui.Pages"
+             x:Class="SevenGuis.Maui.Pages.CounterPage"
+             x:DataType="pages:CounterPageViewModel"
+             Title="CounterPage">
+
+      <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                
+                <Label Text="Current count:" />
+
+                <Label Margin="5,0,0,0"
+                       Text="{Binding Count}" />
+
+            </HorizontalStackLayout>
+
+            <Button
+                Text="Increment"
+                Command="{Binding IncrementCommand}"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

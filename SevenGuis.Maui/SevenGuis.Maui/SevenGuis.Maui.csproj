@@ -43,8 +43,17 @@
 
 	<ItemGroup>
 	  <None Remove="CommunityToolkit.Mvvm" />
+	  <None Remove="Pages\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Pages\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="Pages\CounterPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>
