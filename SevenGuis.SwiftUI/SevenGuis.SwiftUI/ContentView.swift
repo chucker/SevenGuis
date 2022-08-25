@@ -1,26 +1,19 @@
-//
-//  ContentView.swift
-//  SevenGuis.SwiftUI
-//
-//  Created by Sören Kuklau on 14.08.22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     @State private var counter = 0
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("Current count:")
-                Text(String(counter))
+        NavigationView {
+            List {
+                NavigationLink {
+                    CounterView()
+                } label: {
+                    Label("Counter", systemImage: "number.circle")
+                }
             }
-            
-            Button("Increment") {
-                counter += 1
-            }
-        }.padding(10)
+            .listStyle(SidebarListStyle())
+        }
     }
 }
 
