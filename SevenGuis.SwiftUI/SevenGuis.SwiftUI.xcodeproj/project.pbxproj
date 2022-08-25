@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F718D6F28B806BB00CA427B /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F718D6E28B806BB00CA427B /* CounterView.swift */; };
+		5F718D7128B807CB00CA427B /* TemperatureConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F718D7028B807CB00CA427B /* TemperatureConverterView.swift */; };
 		5F74FE1928A962A300F10ED7 /* SevenGuis_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74FE1828A962A300F10ED7 /* SevenGuis_SwiftUIApp.swift */; };
 		5F74FE1B28A962A300F10ED7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74FE1A28A962A300F10ED7 /* ContentView.swift */; };
 		5F74FE1D28A962A400F10ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F74FE1C28A962A400F10ED7 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		5F718D6E28B806BB00CA427B /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		5F718D7028B807CB00CA427B /* TemperatureConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterView.swift; sourceTree = "<group>"; };
 		5F74FE1528A962A300F10ED7 /* SevenGuis.SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenGuis.SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F74FE1828A962A300F10ED7 /* SevenGuis_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenGuis_SwiftUIApp.swift; sourceTree = "<group>"; };
 		5F74FE1A28A962A300F10ED7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,12 +56,13 @@
 		5F74FE1728A962A300F10ED7 /* SevenGuis.SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				5F74FE1828A962A300F10ED7 /* SevenGuis_SwiftUIApp.swift */,
-				5F74FE1A28A962A300F10ED7 /* ContentView.swift */,
 				5F74FE1C28A962A400F10ED7 /* Assets.xcassets */,
-				5F74FE2128A962A400F10ED7 /* SevenGuis_SwiftUI.entitlements */,
-				5F74FE1E28A962A400F10ED7 /* Preview Content */,
+				5F74FE1A28A962A300F10ED7 /* ContentView.swift */,
 				5F718D6E28B806BB00CA427B /* CounterView.swift */,
+				5F74FE1E28A962A400F10ED7 /* Preview Content */,
+				5F74FE2128A962A400F10ED7 /* SevenGuis_SwiftUI.entitlements */,
+				5F74FE1828A962A300F10ED7 /* SevenGuis_SwiftUIApp.swift */,
+				5F718D7028B807CB00CA427B /* TemperatureConverterView.swift */,
 			);
 			path = SevenGuis.SwiftUI;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				5F74FE1B28A962A300F10ED7 /* ContentView.swift in Sources */,
 				5F74FE1928A962A300F10ED7 /* SevenGuis_SwiftUIApp.swift in Sources */,
+				5F718D7128B807CB00CA427B /* TemperatureConverterView.swift in Sources */,
 				5F718D6F28B806BB00CA427B /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

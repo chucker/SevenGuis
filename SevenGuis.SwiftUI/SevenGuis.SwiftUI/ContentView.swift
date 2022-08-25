@@ -11,8 +11,15 @@ struct ContentView: View {
                 } label: {
                     Label("Counter", systemImage: "number.circle")
                 }
+                
+                NavigationLink {
+                    TemperatureConverterView()
+                } label: {
+                    Label("Temperature Converter", systemImage: "thermometer.sun.fill")
+                }
             }
             .listStyle(SidebarListStyle())
+            .frame(width: 200)
         }
     }
 }
