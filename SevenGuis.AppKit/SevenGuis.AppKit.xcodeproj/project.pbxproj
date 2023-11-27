@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F51167F2B1527C8005D7912 /* TempConvController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51167E2B1527C8005D7912 /* TempConvController.swift */; };
+		5F5116812B1527DB005D7912 /* TempConvView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5116802B1527DB005D7912 /* TempConvView.xib */; };
+		5F5116842B152C82005D7912 /* SourceListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5116832B152C82005D7912 /* SourceListItem.swift */; };
 		5F71A8942B13FA90008892FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71A8932B13FA90008892FB /* AppDelegate.swift */; };
 		5F71A8962B13FA91008892FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F71A8952B13FA91008892FB /* Assets.xcassets */; };
 		5F71A8992B13FA91008892FB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F71A8972B13FA91008892FB /* MainMenu.xib */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F51167E2B1527C8005D7912 /* TempConvController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConvController.swift; sourceTree = "<group>"; };
+		5F5116802B1527DB005D7912 /* TempConvView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TempConvView.xib; sourceTree = "<group>"; };
+		5F5116832B152C82005D7912 /* SourceListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListItem.swift; sourceTree = "<group>"; };
 		5F71A8902B13FA90008892FB /* SevenGuis.AppKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenGuis.AppKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F71A8932B13FA90008892FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F71A8952B13FA91008892FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +39,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F5116822B1527E8005D7912 /* TempConv */ = {
+			isa = PBXGroup;
+			children = (
+				5F71A8A02B13FF4C008892FB /* TemperatureConverter.swift */,
+				5F51167E2B1527C8005D7912 /* TempConvController.swift */,
+				5F5116802B1527DB005D7912 /* TempConvView.xib */,
+			);
+			path = TempConv;
+			sourceTree = "<group>";
+		};
 		5F71A8872B13FA90008892FB = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +72,8 @@
 				5F71A8952B13FA91008892FB /* Assets.xcassets */,
 				5F71A8972B13FA91008892FB /* MainMenu.xib */,
 				5F71A89A2B13FA91008892FB /* SevenGuis_AppKit.entitlements */,
-				5F71A8A02B13FF4C008892FB /* TemperatureConverter.swift */,
+				5F5116822B1527E8005D7912 /* TempConv */,
+				5F5116832B152C82005D7912 /* SourceListItem.swift */,
 			);
 			path = SevenGuis.AppKit;
 			sourceTree = "<group>";
@@ -119,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F5116812B1527DB005D7912 /* TempConvView.xib in Resources */,
 				5F71A8962B13FA91008892FB /* Assets.xcassets in Resources */,
 				5F71A8992B13FA91008892FB /* MainMenu.xib in Resources */,
 			);
@@ -132,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F71A8942B13FA90008892FB /* AppDelegate.swift in Sources */,
+				5F51167F2B1527C8005D7912 /* TempConvController.swift in Sources */,
 				5F71A8A12B13FF4C008892FB /* TemperatureConverter.swift in Sources */,
+				5F5116842B152C82005D7912 /* SourceListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

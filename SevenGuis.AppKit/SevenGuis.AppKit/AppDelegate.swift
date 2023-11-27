@@ -8,27 +8,10 @@
 import Cocoa
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOutlineViewDataSource {
     @IBOutlet var window: NSWindow!
 
-    @IBOutlet var celsius: NSTextField!
-    @IBOutlet var fahrenheit: NSTextField!
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {}
-
-    func controlTextDidChange(_ obj: Notification) {
-        guard let textField = obj.object as? NSTextField
-        else { return }
-
-        let converter = TemperatureConverter()
-
-        if (textField == celsius) {
-            fahrenheit.doubleValue = converter.toFahrenheit(celsius: celsius.doubleValue)
-        }
-        else if (textField == fahrenheit) {
-            celsius.doubleValue = converter.toCelsius(fahrenheit: fahrenheit.doubleValue)
-        }
-    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
@@ -36,5 +19,36 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate {
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
+        return 1
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
+        switch index {
+        case 0:
+            return SourceListItem(Name: "TempConv")
+        default:
+            return ""
+        }
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
+        let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "TitleCell")
+        
+        guard let colIdentifier = tableColumn?.identifier,
+              colIdentifier == NSUserInterfaceItemIdentifier(rawValue: "TitleColumn"),
+              let cell = outlineView.makeView(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView,
+              let sourceListItem = item as? SourceListItem
+        else { return nil }
+        
+        cell.textField!.stringValue = sourceListItem.Name
+        
+        return cell
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
+        false
     }
 }
