@@ -32,21 +32,28 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
               let item = outlineView.item(atRow: outlineView.selectedRow) as? SourceListItem
         else { return }
         
-        let nib = NSNib(nibNamed: "TempConvView", bundle: nil)!
-        let vc = TempConvController()
-        var views: NSArray? = NSArray()
-        nib.instantiate(withOwner: vc, topLevelObjects: &views)
-        detailView.subviews.removeAll()
+        let vc = TempConvController(nibName: "TempConvView", bundle: nil)
         
-        for item in views! {
-            if let view = item as? NSView
-            {
-                detailView.addSubview(view)
-                
-//                detailView.superview?.replaceSubview(detailView, with: view)
-//                detailView = view
-            }
-        }
+        detailView.addSubview(vc.view)
+        
+//        detailView.superview?.replaceSubview(detailView, with: vc.view)
+        
+        
+//        let nib = NSNib(nibNamed: "TempConvView", bundle: nil)!
+//        let vc = TempConvController()
+//        var views: NSArray? = NSArray()
+//        nib.instantiate(withOwner: vc, topLevelObjects: &views)
+//        detailView.subviews.removeAll()
+//        
+//        for item in views! {
+//            if let view = item as? NSView
+//            {
+//                detailView.addSubview(view)
+//                
+////                detailView.superview?.replaceSubview(detailView, with: view)
+////                detailView = view
+//            }
+//        }
     }
 
     func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
