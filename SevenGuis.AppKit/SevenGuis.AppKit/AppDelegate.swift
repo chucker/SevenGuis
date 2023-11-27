@@ -10,7 +10,9 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOutlineViewDataSource {
     @IBOutlet var window: NSWindow!
-
+    
+    @IBOutlet var detailView: NSView!
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {}
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -24,7 +26,29 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         return 1
     }
-    
+
+    func outlineViewSelectionDidChange(_ notification: Notification) {
+        guard let outlineView = notification.object as? NSOutlineView,
+              let item = outlineView.item(atRow: outlineView.selectedRow) as? SourceListItem
+        else { return }
+        
+        let nib = NSNib(nibNamed: "TempConvView", bundle: nil)!
+        let vc = TempConvController()
+        var views: NSArray? = NSArray()
+        nib.instantiate(withOwner: vc, topLevelObjects: &views)
+        detailView.subviews.removeAll()
+        
+        for item in views! {
+            if let view = item as? NSView
+            {
+                detailView.addSubview(view)
+                
+//                detailView.superview?.replaceSubview(detailView, with: view)
+//                detailView = view
+            }
+        }
+    }
+
     func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
         switch index {
         case 0:
