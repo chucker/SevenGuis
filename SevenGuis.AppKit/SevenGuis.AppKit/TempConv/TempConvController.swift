@@ -12,11 +12,6 @@ class TempConvController : NSViewController, NSTextFieldDelegate {
     @IBOutlet var fahrenheit: NSTextField!
     
     override func awakeFromNib() {
-        print(self)
-    }
-
-    override func viewDidLoad() {
-        print(self)
     }
 
     func controlTextDidChange(_ obj: Notification) {

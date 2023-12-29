@@ -9,6 +9,4 @@ import Cocoa
 
 struct SourceListItem {
     let Name: String
-
-//    let View: NSView
 }

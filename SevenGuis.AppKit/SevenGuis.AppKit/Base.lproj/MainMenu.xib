@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -685,19 +685,19 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="530" height="505"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
             <view key="contentView" misplaced="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="530" height="506"/>
+                <rect key="frame" x="0.0" y="0.0" width="530" height="505"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="28" horizontalPageScroll="10" verticalLineScroll="28" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fe-8A-2VB">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="488"/>
+                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fe-8A-2VB">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="464"/>
                         <clipView key="contentView" drawsBackground="NO" id="96i-9u-E3I">
-                            <rect key="frame" x="0.0" y="0.0" width="150" height="488"/>
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="464"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="28" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" indentationPerLevel="13" outlineTableColumn="MQO-9h-Qct" id="XSw-fA-Tak">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="488"/>
+                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" indentationPerLevel="13" outlineTableColumn="MQO-9h-Qct" id="XSw-fA-Tak">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="464"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="0.0"/>
                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -757,7 +757,7 @@
                         </scroller>
                     </scrollView>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="Qjo-Me-yiO">
-                        <rect key="frame" x="158" y="0.0" width="372" height="488"/>
+                        <rect key="frame" x="158" y="0.0" width="372" height="464"/>
                     </customView>
                 </subviews>
                 <constraints>
