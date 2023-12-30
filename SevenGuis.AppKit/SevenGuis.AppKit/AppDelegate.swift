@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
     }
     
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
-        return 1
+        return 2
     }
 
     func outlineViewSelectionDidChange(_ notification: Notification) {
@@ -67,7 +67,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
 //        }
     }
     
-    let items = [SourceListItem(Name: "Temperature Converter", ControllerClassName: "TempConvController", NibName: "TempConvView")]
+    let items = [SourceListItem(Name: "Counter", ControllerClassName: "CounterController", NibName: "CounterView"),
+                 SourceListItem(Name: "Temperature Converter", ControllerClassName: "TempConvController", NibName: "TempConvView")]
 
     func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
         return items[index]

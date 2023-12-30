@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CounterController" customModule="SevenGuis_AppKit" customModuleProvider="target">
+            <connections>
+                <outlet property="field" destination="3ht-gd-h6w" id="bhB-nB-zzw"/>
+                <outlet property="view" destination="c22-O7-iKe" id="v6d-Wz-AbA"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="203" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3ht-gd-h6w">
+                    <rect key="frame" x="20" y="20" width="96" height="20"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="K56-Ko-jXf">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K8E-KI-sGx">
+                    <rect key="frame" x="119" y="13" width="71" height="32"/>
+                    <buttonCell key="cell" type="push" title="Count" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QgQ-jC-fCT">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="countClicked:" target="-2" id="mjJ-Eq-ttK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3ht-gd-h6w" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" symbolic="YES" id="2Z2-V8-6Fy"/>
+                <constraint firstItem="K8E-KI-sGx" firstAttribute="top" secondItem="3ht-gd-h6w" secondAttribute="top" id="I9I-FP-5lJ"/>
+                <constraint firstAttribute="trailing" secondItem="K8E-KI-sGx" secondAttribute="trailing" constant="20" symbolic="YES" id="PFX-bd-zTO"/>
+                <constraint firstItem="K8E-KI-sGx" firstAttribute="centerY" secondItem="3ht-gd-h6w" secondAttribute="centerY" id="Vru-lG-EaZ"/>
+                <constraint firstItem="3ht-gd-h6w" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="cXo-Z9-c0x"/>
+                <constraint firstItem="K8E-KI-sGx" firstAttribute="leading" secondItem="3ht-gd-h6w" secondAttribute="trailing" constant="10" id="nh7-ju-Xcu"/>
+                <constraint firstAttribute="bottom" secondItem="K8E-KI-sGx" secondAttribute="bottom" constant="20" symbolic="YES" id="qnf-5w-nR4"/>
+            </constraints>
+            <point key="canvasLocation" x="-85.5" y="30"/>
+        </customView>
+    </objects>
+</document>

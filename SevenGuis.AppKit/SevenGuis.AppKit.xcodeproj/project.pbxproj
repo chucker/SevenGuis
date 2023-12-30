@@ -14,6 +14,8 @@
 		5F71A8962B13FA91008892FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F71A8952B13FA91008892FB /* Assets.xcassets */; };
 		5F71A8992B13FA91008892FB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F71A8972B13FA91008892FB /* MainMenu.xib */; };
 		5F71A8A12B13FF4C008892FB /* TemperatureConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71A8A02B13FF4C008892FB /* TemperatureConverter.swift */; };
+		5F98F93C2B405D73008B2952 /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F98F93B2B405D73008B2952 /* CounterView.xib */; };
+		5F98F93E2B405DD2008B2952 /* CounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F98F93D2B405DD2008B2952 /* CounterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5F71A8982B13FA91008892FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5F71A89A2B13FA91008892FB /* SevenGuis_AppKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SevenGuis_AppKit.entitlements; sourceTree = "<group>"; };
 		5F71A8A02B13FF4C008892FB /* TemperatureConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverter.swift; sourceTree = "<group>"; };
+		5F98F93B2B405D73008B2952 /* CounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
+		5F98F93D2B405DD2008B2952 /* CounterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +76,20 @@
 				5F71A8952B13FA91008892FB /* Assets.xcassets */,
 				5F71A8972B13FA91008892FB /* MainMenu.xib */,
 				5F71A89A2B13FA91008892FB /* SevenGuis_AppKit.entitlements */,
+				5F98F93A2B405D5D008B2952 /* Counter */,
 				5F5116822B1527E8005D7912 /* TempConv */,
 				5F5116832B152C82005D7912 /* SourceListItem.swift */,
 			);
 			path = SevenGuis.AppKit;
+			sourceTree = "<group>";
+		};
+		5F98F93A2B405D5D008B2952 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				5F98F93B2B405D73008B2952 /* CounterView.xib */,
+				5F98F93D2B405DD2008B2952 /* CounterController.swift */,
+			);
+			path = Counter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,7 @@
 				5F5116812B1527DB005D7912 /* TempConvView.xib in Resources */,
 				5F71A8962B13FA91008892FB /* Assets.xcassets in Resources */,
 				5F71A8992B13FA91008892FB /* MainMenu.xib in Resources */,
+				5F98F93C2B405D73008B2952 /* CounterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F71A8942B13FA90008892FB /* AppDelegate.swift in Sources */,
+				5F98F93E2B405DD2008B2952 /* CounterController.swift in Sources */,
 				5F51167F2B1527C8005D7912 /* TempConvController.swift in Sources */,
 				5F71A8A12B13FF4C008892FB /* TemperatureConverter.swift in Sources */,
 				5F5116842B152C82005D7912 /* SourceListItem.swift in Sources */,
