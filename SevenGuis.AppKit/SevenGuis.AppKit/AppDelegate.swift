@@ -18,12 +18,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
     /// This is required for variable lifetime reasons; otherwise, it gets
     /// cleaned up before it can be called as a delegate.
     var DetailViewController: NSViewController?
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification) {}
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
@@ -46,25 +40,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
         DetailViewController = vc
         
         detailView.addSubview(vc.view)
-        
-//        detailView.superview?.replaceSubview(detailView, with: vc.view)
-        
-        
-//        let nib = NSNib(nibNamed: "TempConvView", bundle: nil)!
-//        let vc = TempConvController()
-//        var views: NSArray? = NSArray()
-//        nib.instantiate(withOwner: vc, topLevelObjects: &views)
-//        detailView.subviews.removeAll()
-//        
-//        for item in views! {
-//            if let view = item as? NSView
-//            {
-//                detailView.addSubview(view)
-//                
-////                detailView.superview?.replaceSubview(detailView, with: view)
-////                detailView = view
-//            }
-//        }
     }
     
     let items = [SourceListItem(Name: "Counter", ControllerClassName: "CounterController", NibName: "CounterView"),
