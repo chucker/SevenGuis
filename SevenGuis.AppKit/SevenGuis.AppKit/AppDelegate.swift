@@ -39,6 +39,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
         
         DetailViewController = vc
         
+        if let oldSubview = detailView.subviews.first{
+            oldSubview.removeFromSuperview()
+        }
+        
         detailView.addSubview(vc.view)
     }
     
