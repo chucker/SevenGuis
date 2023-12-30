@@ -10,5 +10,6 @@ import Cocoa
 struct SourceListItem {
     let Name: String
 
-//    let View: NSView
+    let ControllerClassName: String
+    let NibName: String
 }

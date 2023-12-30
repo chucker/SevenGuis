@@ -38,7 +38,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
               let item = outlineView.item(atRow: outlineView.selectedRow) as? SourceListItem
         else { return }
         
-        let vc = TempConvController(nibName: "TempConvView", bundle: nil)
+        let namespace = "SevenGuis_AppKit" // FIXME: there's got to be a better way?
+        
+        let vcClass = Bundle.main.classNamed("\(namespace).\(item.ControllerClassName)") as! NSViewController.Type
+        let vc = vcClass.init(nibName: item.NibName, bundle: nil)
         
         DetailViewController = vc
         
@@ -63,14 +66,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
 //            }
 //        }
     }
+    
+    let items = [SourceListItem(Name: "Temperature Converter", ControllerClassName: "TempConvController", NibName: "TempConvView")]
 
     func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-        switch index {
-        case 0:
-            return SourceListItem(Name: "TempConv")
-        default:
-            return ""
-        }
+        return items[index]
     }
     
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
