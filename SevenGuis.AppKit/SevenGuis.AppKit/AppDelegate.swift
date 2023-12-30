@@ -13,6 +13,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
     
     @IBOutlet var detailView: NSView!
     
+    /// The current right-hand-side view controller.
+    ///
+    /// This is required for variable lifetime reasons; otherwise, it gets
+    /// cleaned up before it can be called as a delegate.
+    var DetailViewController: NSViewController?
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {}
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -33,6 +39,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
         else { return }
         
         let vc = TempConvController(nibName: "TempConvView", bundle: nil)
+        
+        DetailViewController = vc
         
         detailView.addSubview(vc.view)
         
