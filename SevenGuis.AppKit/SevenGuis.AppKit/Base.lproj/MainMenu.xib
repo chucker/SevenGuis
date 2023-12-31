@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SevenGuis_AppKit" customModuleProvider="target">
             <connections>
                 <outlet property="detailView" destination="Qjo-Me-yiO" id="a11-YP-Z63"/>
+                <outlet property="title" destination="roM-OF-gY4" id="bSR-Lo-mb4"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -690,7 +691,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="530" height="505"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fe-8A-2VB">
+                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fe-8A-2VB" userLabel="Source List">
                         <rect key="frame" x="0.0" y="0.0" width="202" height="440"/>
                         <clipView key="contentView" drawsBackground="NO" id="96i-9u-E3I">
                             <rect key="frame" x="0.0" y="0.0" width="202" height="440"/>
@@ -757,25 +758,35 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Qjo-Me-yiO">
-                        <rect key="frame" x="210" y="0.0" width="320" height="440"/>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Qjo-Me-yiO" userLabel="DetailsView">
+                        <rect key="frame" x="210" y="0.0" width="320" height="400"/>
                     </customView>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="roM-OF-gY4" userLabel="Title">
+                        <rect key="frame" x="208" y="414" width="56" height="26"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" id="SXI-E2-dhe">
+                            <font key="font" textStyle="title1" name=".SFNS-Regular"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Qjo-Me-yiO" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="1Td-Zs-7xj"/>
+                    <constraint firstItem="roM-OF-gY4" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" symbolic="YES" id="1Re-QZ-jki"/>
                     <constraint firstItem="Qjo-Me-yiO" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="210" id="2rM-3D-gIu"/>
+                    <constraint firstItem="Qjo-Me-yiO" firstAttribute="top" secondItem="roM-OF-gY4" secondAttribute="top" constant="20" id="ALq-CY-vIo"/>
                     <constraint firstItem="7Fe-8A-2VB" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="CWq-4s-AAF"/>
                     <constraint firstItem="7Fe-8A-2VB" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="XOx-oO-ya5"/>
                     <constraint firstAttribute="bottom" secondItem="7Fe-8A-2VB" secondAttribute="bottom" id="e2n-yn-ef0"/>
                     <constraint firstAttribute="bottom" secondItem="Qjo-Me-yiO" secondAttribute="bottom" id="fwh-iG-utF"/>
                     <constraint firstItem="Qjo-Me-yiO" firstAttribute="leading" secondItem="7Fe-8A-2VB" secondAttribute="trailing" constant="8" symbolic="YES" id="uXw-o2-YjA"/>
+                    <constraint firstItem="roM-OF-gY4" firstAttribute="leading" secondItem="Qjo-Me-yiO" secondAttribute="leading" constant="20" id="wEz-kg-Vfw"/>
                     <constraint firstAttribute="trailing" secondItem="Qjo-Me-yiO" secondAttribute="trailing" id="wZy-s2-Kbe"/>
                 </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="Voe-Tx-rLC" id="top-28-M4D"/>
             </connections>
-            <point key="canvasLocation" x="225" y="472"/>
+            <point key="canvasLocation" x="225" y="471.5"/>
         </window>
     </objects>
 </document>

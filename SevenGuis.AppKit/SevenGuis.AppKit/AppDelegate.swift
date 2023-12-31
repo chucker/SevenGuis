@@ -11,8 +11,9 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOutlineViewDataSource {
     @IBOutlet var window: NSWindow!
     
+    @IBOutlet var title: NSTextField!
     @IBOutlet var detailView: NSView!
-    
+
     /// The current right-hand-side view controller.
     ///
     /// This is required for variable lifetime reasons; otherwise, it gets
@@ -42,6 +43,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
         if let oldSubview = detailView.subviews.first {
             oldSubview.removeFromSuperview()
         }
+        
+        title.stringValue = item.Name
         
         detailView.addSubview(vc.view)
         
