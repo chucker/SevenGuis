@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class TempConvController : NSViewController, NSTextFieldDelegate {
+class TempConvController: NSViewController, NSTextFieldDelegate {
     @IBOutlet var celsius: NSTextField!
     @IBOutlet var fahrenheit: NSTextField!
 
@@ -17,10 +17,10 @@ class TempConvController : NSViewController, NSTextFieldDelegate {
 
         let converter = TemperatureConverter()
 
-        if (textField == celsius) {
+        if textField == celsius {
             fahrenheit.doubleValue = converter.toFahrenheit(celsius: celsius.doubleValue)
         }
-        else if (textField == fahrenheit) {
+        else if textField == fahrenheit {
             celsius.doubleValue = converter.toCelsius(fahrenheit: fahrenheit.doubleValue)
         }
     }

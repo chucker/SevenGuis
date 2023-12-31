@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F06D2ED2B41DCE90066B794 /* BookFlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F06D2EC2B41DCE90066B794 /* BookFlightView.xib */; };
+		5F06D2EF2B41DD590066B794 /* BookFlightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F06D2EE2B41DD590066B794 /* BookFlightController.swift */; };
 		5F51167F2B1527C8005D7912 /* TempConvController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51167E2B1527C8005D7912 /* TempConvController.swift */; };
 		5F5116812B1527DB005D7912 /* TempConvView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5116802B1527DB005D7912 /* TempConvView.xib */; };
 		5F5116842B152C82005D7912 /* SourceListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5116832B152C82005D7912 /* SourceListItem.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F06D2EC2B41DCE90066B794 /* BookFlightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookFlightView.xib; sourceTree = "<group>"; };
+		5F06D2EE2B41DD590066B794 /* BookFlightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFlightController.swift; sourceTree = "<group>"; };
 		5F51167E2B1527C8005D7912 /* TempConvController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConvController.swift; sourceTree = "<group>"; };
 		5F5116802B1527DB005D7912 /* TempConvView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TempConvView.xib; sourceTree = "<group>"; };
 		5F5116832B152C82005D7912 /* SourceListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListItem.swift; sourceTree = "<group>"; };
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F06D2EB2B41DCD60066B794 /* FlightBooker */ = {
+			isa = PBXGroup;
+			children = (
+				5F06D2EC2B41DCE90066B794 /* BookFlightView.xib */,
+				5F06D2EE2B41DD590066B794 /* BookFlightController.swift */,
+			);
+			path = FlightBooker;
+			sourceTree = "<group>";
+		};
 		5F5116822B1527E8005D7912 /* TempConv */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 				5F71A89A2B13FA91008892FB /* SevenGuis_AppKit.entitlements */,
 				5F98F93A2B405D5D008B2952 /* Counter */,
 				5F5116822B1527E8005D7912 /* TempConv */,
+				5F06D2EB2B41DCD60066B794 /* FlightBooker */,
 				5F5116832B152C82005D7912 /* SourceListItem.swift */,
 			);
 			path = SevenGuis.AppKit;
@@ -154,6 +168,7 @@
 				5F71A8962B13FA91008892FB /* Assets.xcassets in Resources */,
 				5F71A8992B13FA91008892FB /* MainMenu.xib in Resources */,
 				5F98F93C2B405D73008B2952 /* CounterView.xib in Resources */,
+				5F06D2ED2B41DCE90066B794 /* BookFlightView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +181,7 @@
 			files = (
 				5F71A8942B13FA90008892FB /* AppDelegate.swift in Sources */,
 				5F98F93E2B405DD2008B2952 /* CounterController.swift in Sources */,
+				5F06D2EF2B41DD590066B794 /* BookFlightController.swift in Sources */,
 				5F51167F2B1527C8005D7912 /* TempConvController.swift in Sources */,
 				5F71A8A12B13FF4C008892FB /* TemperatureConverter.swift in Sources */,
 				5F5116842B152C82005D7912 /* SourceListItem.swift in Sources */,
