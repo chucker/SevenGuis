@@ -39,11 +39,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDelegate, NSOut
         
         DetailViewController = vc
         
-        if let oldSubview = detailView.subviews.first{
+        if let oldSubview = detailView.subviews.first {
             oldSubview.removeFromSuperview()
         }
         
         detailView.addSubview(vc.view)
+        
+        vc.view.setFrameSize(detailView.frame.size)
     }
     
     let items = [SourceListItem(Name: "Counter", ControllerClassName: "CounterController", NibName: "CounterView"),
